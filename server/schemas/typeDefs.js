@@ -28,7 +28,7 @@ type Query {
     parks(_id: String!): [Park]
 }
 type Mutation {
-    
+
 }`;
 
 module.exports = typeDefs;
