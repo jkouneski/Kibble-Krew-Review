@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Quiet Waters Dog Park",
+    "location": "Annapolis",
+    "address": "600 Quiet Waters Park Rd, Annapolis, MD 21403",
+    "leash": true,
+    "review": "Great place to take your dog"
+  },
+  {
+    "name": "Quiet Waters Dog Beach",
+    "location": "Annapolis",
+    "address": "1701-1799 Quiet Waters Park Rd, Annapolis, MD 21403",
+    "leash": false,
+    "review": "Great place to meet other dogs"
+  },
+  {
+    "name": "Bark Social",
+    "location": "Bethesda",
+    "address": "935 Prose St, North Bethesda, MD 20852",
+    "leash": true,
+    "review": "My do loved it!"
+  },
+  {
+    "name": "Bark Park",
+    "location": "Bel Air",
+    "address": "123 Main St. Bel Air, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!"
+  }
+]
