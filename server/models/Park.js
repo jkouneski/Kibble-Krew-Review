@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const parkSchema = new Schema({
   name: {
@@ -18,10 +18,9 @@ const parkSchema = new Schema({
   },
   review: {
     type: String,
-  }
-
+  },
 });
 
-const Park = model('Park', parkSchema);
+const Park = model("Park", parkSchema);
 
 module.exports = Park;
