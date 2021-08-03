@@ -5,12 +5,7 @@ const citySchema = new Schema({
     type: String,
     required: true,
     unique: true,
-  },
-  cityId: {
-    type: Number,
-    required: true,
-    unique: true,
-  },
+  }
 });
 
 const City = model('City', citySchema);

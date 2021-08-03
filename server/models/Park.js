@@ -1,38 +1,24 @@
 const { Schema, model } = require('mongoose');
 
 const parkSchema = new Schema({
-  parkName: {
+  name: {
     type: String,
     required: true,
   },
-  parkLocation: {
+  location: {
     type: String,
     required: true,
   },
-  parkId: {
-    type: Number,
-    min: 0,
+  address: {
+    type: String,
     required: true,
-    unique: true,
   },
-  parkSize: {
+  leash: {
+    type: Boolean,
+  },
+  review: {
     type: String,
-  },
-  comment: {
-    type: String,
-  },
-  poopBags: {
-    type: Boolean,
-  },
-  hasFence: {
-    type: Boolean,
-  },
-  isClean: {
-    type: Boolean,
-  },
-  isSupervised: {
-    type: Boolean,
-  },
+  }
 
 });
 
