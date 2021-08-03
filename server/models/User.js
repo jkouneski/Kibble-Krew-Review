@@ -10,12 +10,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-  },
-  userId: {
-    type: Number,
-    required: true,
-    unique: true,
-  },
+  }
 });
 
 const User = model('User', userSchema);
