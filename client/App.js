@@ -4,14 +4,14 @@ import {
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
+} from './src/pages/node_modules/@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
-import User from './pages/User';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
+import Home from './src/pages/Home';
+import User from './src/pages/User';
+import Signup from './src/pages/Signup';
+import Login from './src/pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
