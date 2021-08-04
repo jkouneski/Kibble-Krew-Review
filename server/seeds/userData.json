@@ -14,32 +14,31 @@
     {
       "username": "user4",
       "password": "password04"
-      
-    },
-    {
-      "username": "user4",
-      "password": "password04"
     },
     {
       "username": "user5",
       "password": "password05"
-      
     },
     {
       "username": "user6",
       "password": "password06"
+      
     },
     {
-      "name": "user7",
+      "username": "user7",
       "password": "password07"
     },
     {
-      "username": "user8",
+      "name": "user8",
       "password": "password08"
     },
     {
       "username": "user9",
       "password": "password09"
+    },
+    {
+      "username": "user10",
+      "password": "password10"
       
     }
   ]

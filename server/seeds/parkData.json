@@ -26,5 +26,13 @@
     "address": "123 Main St. Bel Air, MD 21015",
     "leash": true,
     "review": "Great place for the entire family!"
+  },
+  {
+    "name": "Locust Point Dog Park at Latrobe Park",
+    "location": "Baltimore",
+    "address": "1518 Latrobe Park Terr, Baltimore, MD, US, 21230",
+    "leash": false,
+    "review": "My 25lb dog was the second smallest dog when we visited and he loves to run. The park is approximately ‎100' x 100' with 2 entrances - both are double gated to make sure no dogs slip out. I didn't see a water slide but there is running water and some small pools and bowls that visitors seem to take turns rinsing out and re filling. The dogs all ran and wrestled until they were tired. There are also a bunch of tennis balls for them to chase. Park was clean and everyone there cleaned up after their dogs."
   }
+
 ]
