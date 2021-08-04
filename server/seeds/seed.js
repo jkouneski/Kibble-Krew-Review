@@ -4,7 +4,7 @@ const { City, Park, User } = require("../models");
 
 const cityData = require("./cityData.json");
 const parkData = require("./parkData.json");
-const userDate = require("./userData.json");
+const userData = require("./userData.json");
 
 db.once("open", async () => {
   // clean database

@@ -14,7 +14,6 @@
     {
       "username": "user4",
       "password": "password04"
-      
     },
     {
       "username": "user5",
@@ -34,11 +33,11 @@
       "password": "password08"
     },
     {
-      "name": "user9",
+      "username": "user9",
       "password": "password09"
     },
     {
-      "name": "user10",
+      "username": "user10",
       "password": "password10"
       
     }

@@ -1,19 +1,27 @@
 const express = require("express");
-const path = require("path");
 const { ApolloServer } = require("apollo-server-express");
-const db = require("./config/connection");
-const { typeDefs, resolvers } = require("./schemas");
+const cors = require("cors");
 
+const path = require("path");
+const { typeDefs, resolvers } = require("./schemas");
 const app = express();
+const { authMiddleware } = require("./utils/auth");
+const db = require("./config/connection");
+
+
 const PORT = process.env.PORT || 3001;
+app.use(cors());
+
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware,
 });
 
 server.applyMiddleware({ app });
-app.use(express.urlencoded({ extended: true }));
+
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === "production") {
