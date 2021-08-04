@@ -20,6 +20,7 @@ module.exports = {
     } catch {
       console.log("Invalid token");
     }
+    // new comment
     // pass request object as context in the resolvers
     return req;
   },
