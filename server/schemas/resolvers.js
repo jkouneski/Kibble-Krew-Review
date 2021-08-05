@@ -57,6 +57,6 @@ const resolvers = {
     //       runValidators: true,
     //     })
     // }
-  };
+};
 
-module.exports = resolvers:
+module.exports = resolvers;
