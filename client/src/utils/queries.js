@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const QUERY_USERS = gql`
   query allUsers {
-    Users {
+    users {
       _id
       username
       reviews
