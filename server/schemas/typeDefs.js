@@ -31,10 +31,11 @@ const typeDefs = gql`
     park(location: String): Park
     users: [User]
     user(userId: ID!): User
+    me: User
   }
 
   type Mutation {
-    addUser(username: String!, password: String!): User
+    addUser(username: String!, password: String!): Auth
     login(username: String!, password: String!): Auth
   }
 `;

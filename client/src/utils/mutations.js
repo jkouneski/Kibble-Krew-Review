@@ -24,7 +24,7 @@ export const ADD_REVIEW = gql`
 
 export const LOGIN_USER = gql`
   mutation login($username: String!, $password: String!) {
-    login(name: $username, password: $password) {
+    login(username: $username, password: $password) {
       token
       user {
         _id
