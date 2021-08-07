@@ -1,54 +1,149 @@
 [
   {
-    "name": "Brian Kernighan",
-    "email": "bkernighan@techfriends.dev",
-    "password": "password01"
+    "parkName": "Quiet Waters Dog Park",
+    "parkLocation": "Annapolis",
+    "address": "600 Quiet Waters Park Rd, Annapolis, MD 21403",
+    "leash": true,
+    "review": "Great place to take your dog",
+    "image": "/images/IMG_0333.jpeg"
   },
   {
-    "name": "Max Kanat-Alexander",
-    "email": "mkanatalexander@techfriends.dev",
-    "password": "password02"
+    "parkName": "Quiet Waters Dog Beach",
+    "parkLocation": "Annapolis",
+    "address": "1701-1799 Quiet Waters Park Rd, Annapolis, MD 21403",
+    "leash": false,
+    "review": "Great place to meet other dogs",
+    "image": "/images/pexels-blue-bird-7210592.jpg"
   },
   {
-    "name": "Amiko Stay",
-    "email": "amiko@techfriends.dev",
-    "password": "password03"
+    "parkName": "Bark Social",
+    "parkLocation": "Bethesda",
+    "address": "935 Prose St, North Bethesda, MD 20852",
+    "leash": true,
+    "review": "My do loved it!",
+    "image": "/images/pexels-chris-f-1565946.jpg"
   },
   {
-    "name": "Kent Beck",
-    "email": "kbeck@techfriends.dev",
-    "password": "password04"
-
+    "parkName": "Bark Social Addition",
+    "parkLocation": "Bethesda",
+    "address": "1825 North Main, South Bethesda, MD 20852",
+    "leash": true,
+    "review": "My do loved it!",
+    "image": "/images/pexels-kristina-paukshtite-139922.jpg"
   },
   {
-    "name": "Edward V. Berard",
-    "email": "evberard@techfriends.dev",
-    "password": "password05"
+    "parkName": "Bark Park",
+    "parkLocation": "Baltimore",
+    "address": "123 Main St. Baltimore, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-creative-vix-7288.jpg"
   },
   {
-    "name": "Alan Kay",
-    "email": "akay@techfriends.dev",
-    "password": "password06"
-    
+    "parkName": "Kibble Krew Park",
+    "parkLocation": "Salisbury",
+    "address": "123 Any Street St. Salisbury, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-kristina-paukshtite-139922.jpg"
   },
   {
-    "name": "C.A.R. Hoare",
-    "email": "choare@techfriends.dev",
-    "password": "password07"
+    "parkName": "New Kibble Krew Park",
+    "parkLocation": "Salisbury",
+    "address": "123 10th Street. Salisbury, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-michael-morse-2414845.jpg"
   },
   {
-    "name": "David Thomas",
-    "email": "dthomas@techfriends.dev",
-    "password": "password08"
+    "parkName": "Germantown Pup Park",
+    "parkLocation": "Germantown",
+    "address": "123 Main St. Germantown, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-michael-morse-2414845.jpg"
   },
   {
-    "name": "Donald Knuth",
-    "email": "dknuth@techfriends.dev",
-    "password": "password09"
+    "parkName": "White Marsh Pup Park",
+    "parkLocation": "White Marsh",
+    "address": "123 Main St. White Marsh, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-ÑÐ»Ð¸Ñ-8773457.jpg"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@techfriends.dev",
-    "password": "password10"    
+    "parkName": "White Marsh Pup Park2",
+    "parkLocation": "White Marsh",
+    "address": "123 This Street. White Marsh, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image":"/images/pexels-samson-katt-5255592.jpg"
+  },
+  {
+    "parkName": "Fredrick Pup Park1",
+    "parkLocation": "Fredrick",
+    "address": "223 This Street. Fredrick, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-sebastian-coman-travel-3641201.jpg"
+  },
+  {
+    "parkName": "Fredrick Pup Park2",
+    "parkLocation": "Fredrick",
+    "address": "423 Other Street. Fredrick, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-zen-chung-5749780.jpg"
+  },
+  {
+    "parkName": "Fredrick Pup Park3",
+    "parkLocation": "Fredrick",
+    "address": "423 Fab Street. Fredrick, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-sebastian-coman-travel-3641201.jpg"
+  },
+  {
+    "parkName": "Maryland City Pup Social",
+    "parkLocation": "Maryland City",
+    "address": "82nd Street. Maryland City, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-zen-chung-5749780.jpg"
+  },
+  {
+    "parkName": "MC Pups Park",
+    "parkLocation": "Maryland City",
+    "address": "Dog Park Lane. Maryland, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-samson-katt-5255592.jpg"
+  },
+  {
+    "parkName": "Ocean City Puppy Land",
+    "parkLocation": "Ocean City",
+    "address": "33 Waters Way, Maryland, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-sebastian-coman-travel-3641201.jpg"
+  },
+  {
+    "parkName": "Doggie Day Park",
+    "parkLocation": "Bel Air",
+    "address": "10 Edmonton Rd, Maryland, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-blue-bird-7210592.jpg"
+  },
+  {
+    "parkName": "Fun Dog Day",
+    "parkLocation": "Bel Air",
+    "address": "10 Tollgate Rd, Maryland, MD 21015",
+    "leash": true,
+    "review": "Great place for the entire family!",
+    "image": "/images/pexels-sebastian-coman-travel-3641201.jpg"
   }
+  
+
+  
 ]
