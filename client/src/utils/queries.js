@@ -1,21 +1,21 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_USERS = gql`
-  query allUsers {
-    users {
+export const QUERY_PROFILES = gql`
+  query allProfiles {
+    profiles {
       _id
-      username
-      reviews
+      name
+      skills
     }
   }
 `;
 
-export const QUERY_SINGLE_USER = gql`
-  query singleUser($userId: ID!) {
-    user(userId: $userId) {
+export const QUERY_SINGLE_PARK = gql`
+  query singlePark($parkId: ID!) {
+    park(parkId: $parkId) {
       _id
-      username
-      reviews
+      name
+      skills
     }
   }
 `;
@@ -24,20 +24,21 @@ export const QUERY_ME = gql`
   query me {
     me {
       _id
-      username
-      reviews
+      name
+      skills
     }
   }
 `;
-// city query
+//city query
 export const GET_PARKS_CITYNAME = gql`
   query getCity($name: String) {
     city(name: $name) {
-      parkName
+      name
       parkLocation
       address
       leash
-      review
+      reviews
+      image
     }
   }
 `;

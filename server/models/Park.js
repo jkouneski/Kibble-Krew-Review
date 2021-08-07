@@ -1,26 +1,32 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require('mongoose');
 
 const parkSchema = new Schema({
-  name: {
+  parkName: {
     type: String,
     required: true,
   },
-  location: {
+  parkLocation: {
     type: String,
     required: true,
   },
+  reviews: [
+    {
+      type: String,
+      trim: true,
+    },
+  ],
   address: {
-    type: String,
-    required: true,
+    type: String
   },
   leash: {
     type: Boolean,
   },
-  review: {
-    type: String,
+  image: {
+    type: String
   },
+
 });
 
-const Park = model("Park", parkSchema);
+const Park = model('Park', parkSchema);
 
 module.exports = Park;

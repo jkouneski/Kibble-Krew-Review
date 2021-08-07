@@ -1,68 +1,98 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { City, Park, User } = require("../models");
-const { signToken } = require("../utils/auth");
+const { Profile, City, Park } = require('../models');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
-  // find all cities
   Query: {
-    cities: async () => {
-      return City.find();
+    profiles: async () => {
+      return Profile.find();
     },
-    city: async (parent, { args }) => {
-      const data = await City.findOne({ _id: cityId });
-      const park = await Park.find({ location: data.name });
-      console.log(park);
-      return park;
+    cities: async () => {
+      return City.find()
     },
     parks: async () => {
-      return Park.find();
+      return Park.find()
     },
-    users: async () => {
-      return User.find();
+    city: async (parent, args) => {
+      const data = await City.findOne({name: args.name})
+      const park = await Park.find({parkLocation: data.name})
+      console.log(park)
+      return park
     },
-    user: async (parent, { userId }) => {
-      return User.findOne({ _id: userId });
+
+    profile: async (parent, { profileId }) => {
+      return Profile.findOne({ _id: profileId });
     },
+    // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        return Profile.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
   },
+
   Mutation: {
-    addUser: async (parent, { username, password }) => {
-      const user = await User.create({ username, password });
-      const token = signToken(user);
+    addProfile: async (parent, { name, email, password }) => {
+      const profile = await Profile.create({ name, email, password });
+      const token = signToken(profile);
 
-      return { token, user };
+      return { token, profile };
     },
-    login: async (parent, { username, password }) => {
-      const user = await User.findOne({ username });
+    login: async (parent, { email, password }) => {
+      const profile = await Profile.findOne({ email });
 
-      if (!user){
-        throw new AuthenticationError('User not found')
+      if (!profile) {
+        throw new AuthenticationError('No profile with this email found!');
       }
-      const correctPw = await user.isCorrectPassword(password)
+
+      const correctPw = await profile.isCorrectPassword(password);
+
       if (!correctPw) {
         throw new AuthenticationError('Incorrect password!');
       }
 
-      const token = signToken(user);
-      return { token, user };
+      const token = signToken(profile);
+      return { token, profile };
     },
-      
+
+    // Add a third argument to the resolver to access data in our `context`
+    addReview: async (parent, { parkId, review }, context) => {
+      // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
+      if (context.user) {
+        return Park.findOneAndUpdate(
+          { _id: parkId },
+          {
+            $addToSet: { reviews: review },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      // If user attempts to execute this mutation and isn't logged in, throw an error
+      throw new AuthenticationError('You need to be logged in!');
     },
-    // addReview: async (parent, {userId: ID, review}) => {
-    //   return User.findByIdAndUpdate( { _id: profileId },
-    //     {
-    //       $addToSet: { reviews: review },
-    //     },
-    //     {
-    //       new: true,
-    //       runValidators: true,
-    //     })
-    // }
+    // Set up mutation so a logged in user can only remove their profile and no one else's
+    removeProfile: async (parent, args, context) => {
+      if (context.user) {
+        return Profile.findOneAndDelete({ _id: context.user._id });
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    // Make it so a logged in user can only remove a skill from their own profile
+    removeReview: async (parent, { review }, context) => {
+      if (context.user) {
+        return Park.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { reviews: review } },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+  },
 };
 
 module.exports = resolvers;
