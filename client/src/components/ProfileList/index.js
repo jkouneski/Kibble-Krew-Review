@@ -22,6 +22,8 @@ const ProfileList = ({ profiles, title }) => {
 // when no user profiles return message
   if (!profiles.length) {
     return <h3>No Profiles Yet</h3>;
+  } else {
+    console.log('profiles +++', profiles);
   }
 // on submit return value of city query and prevent reload event 
   function handleSubmit(e) {
@@ -34,8 +36,9 @@ const ProfileList = ({ profiles, title }) => {
   return (
     <div>
     <div>
+    {/* city query */}
       <form onSubmit={handleSubmit}>
-        <input type="text" ref={node => input = node} />
+        <input placeholder="Type city to query" type="text" ref={node => input = node} />
         <button>submit</button>
       </form>
     </div>
@@ -46,14 +49,14 @@ const ProfileList = ({ profiles, title }) => {
       })}
     </div>
     {/* profile summary and links for users */}
-      {/* <h3 className="text-primary">{title}</h3>
+      <h3 className="text-primary">{title}</h3>
       <div className="flex-row justify-space-between my-4">
         {profiles &&
           profiles.map((profile) => (
             <div key={profile._id} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {profile.name} <br />
+                  {profile.parkName} <br />
                   <span className="text-white" style={{ fontSize: '1rem' }}>
                     currently has {profile.skills ? profile.skills.length : 0}{' '}
                     posts
@@ -70,7 +73,7 @@ const ProfileList = ({ profiles, title }) => {
               </div>
             </div>
           ))}
-      </div> */}
+      </div>
     </div>
   );
 };

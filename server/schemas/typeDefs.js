@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Profile {
     _id: ID
     name: String
+    parkName: String
     email: String
     password: String
     skills: [String]!
@@ -19,13 +20,11 @@ const typeDefs = gql`
   }
 
   type Park {
-    _id: ID
-    name: String
+    parkName: String
     parkLocation: String
     address: String
-    reviews: [String]!
+    review: String
     leash: Boolean
-    image: String
   }
 
   type Query {
@@ -46,9 +45,6 @@ const typeDefs = gql`
     addSkill(profileId: ID!, skill: String!): Profile
     removeProfile: Profile
     removeSkill(skill: String!): Profile
-
-    addReview(parkId: ID!, review: String!): Park
-    removeReview(review: String!): Park
   }
 `;
 

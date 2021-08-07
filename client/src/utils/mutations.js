@@ -12,12 +12,12 @@ export const ADD_PROFILE = gql`
   }
 `;
 
-export const ADD_REVIEW = gql`
-  mutation addReview($parkId: ID!, $review: String!) {
-    addReview(parkId: $parkId, review: $review) {
+export const ADD_SKILL = gql`
+  mutation addSkill($profileId: ID!, $skill: String!) {
+    addSkill(profileId: $profileId, skill: $skill) {
       _id
       name
-      reviews
+      skills
     }
   }
 `;
@@ -34,12 +34,12 @@ export const LOGIN_USER = gql`
   }
 `;
 
-export const REMOVE_REVIEW = gql`
-  mutation removeReview($review: String!) {
-    removeReview(review: $review) {
+export const REMOVE_SKILL = gql`
+  mutation removeSkill($skill: String!) {
+    removeSkill(skill: $skill) {
       _id
       name
-      reviews
+      skills
     }
   }
 `;

@@ -57,13 +57,13 @@ const resolvers = {
     },
 
     // Add a third argument to the resolver to access data in our `context`
-    addReview: async (parent, { parkId, review }, context) => {
+    addSkill: async (parent, { profileId, skill }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
-        return Park.findOneAndUpdate(
-          { _id: parkId },
+        return Profile.findOneAndUpdate(
+          { _id: profileId },
           {
-            $addToSet: { reviews: review },
+            $addToSet: { skills: skill },
           },
           {
             new: true,
@@ -82,11 +82,11 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     // Make it so a logged in user can only remove a skill from their own profile
-    removeReview: async (parent, { review }, context) => {
+    removeSkill: async (parent, { skill }, context) => {
       if (context.user) {
-        return Park.findOneAndUpdate(
+        return Profile.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { reviews: review } },
+          { $pull: { skills: skill } },
           { new: true }
         );
       }
