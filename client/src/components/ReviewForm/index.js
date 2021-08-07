@@ -6,7 +6,7 @@ import { ADD_REVIEW } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const ReviewForm = ({ userId }) => {
+const ReviewForm = ({ parkId }) => {
   const [review, setReview] = useState('');
 
   const [addReview, { error }] = useMutation(ADD_REVIEW);
@@ -16,7 +16,7 @@ const ReviewForm = ({ userId }) => {
 
     try {
       const data = await addReview({
-        variables: { userId, review },
+        variables: { parkId, review },
       });
 
       setReview('');
@@ -36,7 +36,7 @@ const ReviewForm = ({ userId }) => {
         >
           <div className="col-12 col-lg-9">
             <input
-              placeholder="Add review here.."
+              placeholder="Add your review here.."
               value={review}
               className="form-input w-100"
               onChange={(event) => setReview(event.target.value)}
@@ -44,8 +44,8 @@ const ReviewForm = ({ userId }) => {
           </div>
 
           <div className="col-12 col-lg-3">
-            <button className="btn btn-info btn-block py-3" type="submit">
-              Add Review, Comment, or Message
+            <button className="btn btn-primary btn-block py-3" type="submit">
+              Add Review
             </button>
           </div>
           {error && (

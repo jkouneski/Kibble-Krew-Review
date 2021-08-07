@@ -1,5 +1,6 @@
+const Profile = require('./Profile');
 const City = require('./City');
 const Park = require('./Park');
-const User = require('./User');
+// const User = require('./User');
 
-module.exports = { City, Park, User };
+module.exports = { Profile, City, Park };

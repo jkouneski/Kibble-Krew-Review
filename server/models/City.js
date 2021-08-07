@@ -1,5 +1,5 @@
-const { Schema, model } = require("mongoose");
-const Park = require("./Park");
+const { Schema, model } = require('mongoose');
+const Park = require('./Park');
 
 const citySchema = new Schema({
   name: {
@@ -7,9 +7,19 @@ const citySchema = new Schema({
     required: true,
     unique: true,
   },
-  parks: [{ type: Schema.Types.ObjectId, ref: Park }],
+  // cityId: {
+  //   type: Number,
+  //   required: true,
+  //   unique: true,
+  // },
+  parks: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: Park
+    }
+  ]
 });
 
-const City = model("City", citySchema);
+const City = model('City', citySchema);
 
 module.exports = City;

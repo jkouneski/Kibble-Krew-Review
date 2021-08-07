@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-// sets history button in footer
+
 const Footer = () => {
   const location = useLocation();
   const history = useHistory();
