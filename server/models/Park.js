@@ -9,20 +9,38 @@ const parkSchema = new Schema({
     type: String,
     required: true,
   },
-  reviews: [
-    {
-      type: String,
-      trim: true,
-    },
-  ],
+  review: {
+    type: String
+  },
   address: {
     type: String
   },
-  leash: {
+  // parkId: {
+  //   type: Number,
+  //   min: 0,
+  //   required: true,
+  //   unique: true,
+  // },
+  parkSize: {
+    type: String,
+  },
+  comment: {
+    type: String,
+  },
+  poopBags: {
     type: Boolean,
   },
-  image: {
-    type: String
+  hasFence: {
+    type: Boolean,
+  },
+  isClean: {
+    type: Boolean,
+  },
+  isSupervised: {
+    type: Boolean,
+  },
+  leash: {
+    type: Boolean,
   },
 
 });

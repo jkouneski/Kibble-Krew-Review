@@ -8,6 +8,13 @@ const profileSchema = new Schema({
     unique: true,
     trim: true,
   },
+  parkName: {
+    type: String,
+    required: true,
+    unique: true
+    ,
+    trim: true,
+  },
   email: {
     type: String,
     required: true,

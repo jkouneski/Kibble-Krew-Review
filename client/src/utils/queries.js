@@ -5,14 +5,15 @@ export const QUERY_PROFILES = gql`
     profiles {
       _id
       name
+      parkName
       skills
     }
   }
 `;
 
-export const QUERY_SINGLE_PARK = gql`
-  query singlePark($parkId: ID!) {
-    park(parkId: $parkId) {
+export const QUERY_SINGLE_PROFILE = gql`
+  query singleProfile($profileId: ID!) {
+    profile(profileId: $profileId) {
       _id
       name
       skills
@@ -29,16 +30,15 @@ export const QUERY_ME = gql`
     }
   }
 `;
-//city query
+// city query
 export const GET_PARKS_CITYNAME = gql`
   query getCity($name: String) {
     city(name: $name) {
-      name
+      parkName
       parkLocation
       address
       leash
-      reviews
-      image
+      review
     }
   }
 `;

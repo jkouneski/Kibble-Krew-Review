@@ -27,7 +27,8 @@ const Login = (props) => {
       const { data } = await login({
         variables: { ...formState },
       });
-
+      console.log('login data', data)
+      localStorage.setItem('name', data.login.profile.name || "");
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
